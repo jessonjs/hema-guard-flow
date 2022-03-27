@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/hema-guard-flow/static/css/main.f123c22c.css",
-    "main.js": "/hema-guard-flow/static/js/main.2a82201e.js",
+    "main.js": "/hema-guard-flow/static/js/main.46194619.js",
     "static/js/787.3510a985.chunk.js": "/hema-guard-flow/static/js/787.3510a985.chunk.js",
     "index.html": "/hema-guard-flow/index.html",
     "main.f123c22c.css.map": "/hema-guard-flow/static/css/main.f123c22c.css.map",
-    "main.2a82201e.js.map": "/hema-guard-flow/static/js/main.2a82201e.js.map",
+    "main.46194619.js.map": "/hema-guard-flow/static/js/main.46194619.js.map",
     "787.3510a985.chunk.js.map": "/hema-guard-flow/static/js/787.3510a985.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f123c22c.css",
-    "static/js/main.2a82201e.js"
+    "static/js/main.46194619.js"
   ]
 }
