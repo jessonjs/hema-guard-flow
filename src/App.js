@@ -9,15 +9,15 @@ import { Duration } from './components/Duration';
 import { GuardsLevel } from './components/GuardsLevel';
 
 function App() {
-  const levels = {
-    1: useMainGuards(),
-    2: useSecondaryGuards(),
-    3: useTertiaryGuards(),
-  };
+  const levels = [
+    useMainGuards(),
+    useSecondaryGuards(),
+    useTertiaryGuards(),
+  ];
 
-  const [availableGuards, setAvailableGuards] = useState(levels[1]);
+  const [availableGuards, setAvailableGuards] = useState(levels[0]);
   const [timer, setTimer] = useState(3000);
-  const [guardDisplayed, setGuardDisplayed] = useState(levels[1][0]);
+  const [guardDisplayed, setGuardDisplayed] = useState(levels[0][0]);
   const [started, setStarted] = useState(false);
   const [paused, setPaused] = useState(true);
   const [countdown, setCountdown] = useState(3);
@@ -40,8 +40,7 @@ function App() {
 
     const getNewGuard = () => {
       const currentGuardIndex = availableGuards.indexOf(currentGuard);
-
-      let _availableGuards = currentGuardIndex > -1 ?
+      const _availableGuards = currentGuardIndex > -1 ?
         [...availableGuards.slice(0, currentGuardIndex), ...availableGuards.slice(currentGuardIndex + 1)] :
         availableGuards;
 
