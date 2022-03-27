@@ -23,13 +23,15 @@ function App() {
   const [countdown, setCountdown] = useState(3);
 
   const updateCurrentLevel = (level) => {
-    let joined = [];
-
-    for (let i = 1; i <= level; i++) {
-      joined = [...joined, ...levels[i]];
-    }
-
-    setAvailableGuards(joined);
+    const calculateAvailableGuards = (currentLevel, guardsAggr = []) => {
+      return currentLevel === 0
+        ? guardsAggr
+        : calculateAvailableGuards(currentLevel - 1, [
+            ...guardsAggr,
+            ...levels[level - currentLevel]
+          ]);
+    };
+    setAvailableGuards(calculateAvailableGuards(level));
   };
 
   useEffect(() => {
